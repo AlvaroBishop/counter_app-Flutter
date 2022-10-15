@@ -30,7 +30,7 @@ class _CounterScreenState extends State<CounterScreen> {
   Widget build(BuildContext context) {
     // variables
 
-    TextStyle textStyle = const TextStyle(fontSize: 30, color: Colors.indigo);
+    TextStyle textStyle = TextStyle(fontSize: 35, color: Colors.green[300]);
 
     return Scaffold(
       // Prepara el sitio para que pueda trabajar en el
@@ -47,7 +47,10 @@ class _CounterScreenState extends State<CounterScreen> {
             Text('Numero de Clicks', style: textStyle),
             Text(
               '$counter',
-              style: textStyle,
+              style: const TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
@@ -82,14 +85,20 @@ class CustomFloatingActions extends StatelessWidget {
       children: [
         FloatingActionButton(
           onPressed: () => decreaseFn(),
+          backgroundColor: Colors.green[300],
+          splashColor: Colors.white70,
           child: const Icon(Icons.exposure_minus_1_outlined),
         ),
         FloatingActionButton(
           onPressed: () => resetFn(),
+          backgroundColor: Colors.green[300],
+          splashColor: Colors.white70,
           child: const Icon(Icons.restart_alt_outlined),
         ),
         FloatingActionButton(
           onPressed: () => increaseFn(),
+          backgroundColor: Colors.green[300],
+          splashColor: Colors.white70,
           child: const Icon(Icons.exposure_plus_1_outlined),
         ),
       ],
